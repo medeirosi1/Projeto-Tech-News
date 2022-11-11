@@ -19,7 +19,8 @@ def fetch(url):
 # Requisito 2
 def scrape_novidades(html_content):
     selector = Selector(html_content)
-    return selector.css(".cs-overlay a::attr(href)").getall()
+    # return selector.css(".cs-overlay a::attr(href)").getall()
+    return selector.css(".cs-overlay-link::attr(href)").getall()
 
 
 # Requisito 3
